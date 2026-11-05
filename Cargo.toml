@@ -1,0 +1,37 @@
+[package]
+name = "freeterm"
+version = "0.1.0"
+edition = "2024"
+authors = ["Daniele Colucci"]
+description = "A free, fast, native SSH, SFTP, serial and local terminal client for Windows, written in Rust."
+license = "MIT"
+readme = "README.md"
+keywords = ["ssh", "sftp", "terminal", "serial", "egui"]
+categories = ["command-line-utilities", "network-programming"]
+
+[dependencies]
+dirs = "7.0.0"
+eframe = { version = "0.37.0", default-features = false, features = ["default_fonts", "glow", "clipboard"] }
+image = { version = "0.25.10", default-features = false, features = ["png"] }
+portable-pty = "0.9.0"
+russh = { version = "0.65.1", default-features = false, features = ["ring", "flate2", "rsa"] }
+russh-sftp = "3.0.1"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+serialport = { version = "4.10.1", default-features = false }
+tokio = { version = "1.54.1", features = ["rt", "net", "io-util", "time", "sync", "fs"] }
+vt100 = "0.18.1"
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61.2", features = ["Win32_Foundation", "Win32_Security_Cryptography"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true

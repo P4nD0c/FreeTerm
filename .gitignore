@@ -1,0 +1,19 @@
+# Build output
+/target/
+
+# Editors and OS files
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
+
+# Never commit personal data or keys
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+id_ecdsa*
+workspace.dat
+vault.json
+known_hosts
