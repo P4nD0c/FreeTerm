@@ -6,7 +6,7 @@ FreeTerm keeps your servers, keys, tunnels and favourite commands in one place, 
 SSH, SFTP, serial and local terminals in tabs. It's a small native app (no Electron or web
 view), it stores everything on your own computer, and it never phones home.
 
-Created by **Daniele Colucci**.
+Created by **Daniele Colucci** using AI.
 
 ![Hosts](docs/hosts.png)
 
