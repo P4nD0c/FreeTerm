@@ -48,7 +48,7 @@ nothing to install.
 You need the latest stable [Rust](https://rustup.rs) toolchain.
 
 ```bash
-git clone https://github.com/<your-username>/freeterm.git
+git clone https://github.com/P4nD0c/freeterm.git
 cd freeterm
 cargo build --release
 ```
